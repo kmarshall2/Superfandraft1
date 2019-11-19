@@ -3,6 +3,7 @@ body {
 	width: 100%;
 	margin: 0;
 	display: flex;
+	cursor: url(https://img.icons8.com/color/48/000000/o.png) 10 10, auto;
 }
 
 /* whatever display the parent is, will be what the child is*/
@@ -54,6 +55,16 @@ body {
 	max-width: 90%;
 }
 
+.img2 {
+	max-height: 90%;
+	max-width: 90%;
+}
+
+.img3 {
+	max-height: 90%;
+	max-width: 90%;
+}
+
 .center {
 	align-items: center;
 	justify-content: center;
@@ -87,13 +98,13 @@ body {
 @keyframes shadow-pulse
 {
      0% {
-          transform: scale(.5);
+          transform: scale(0.5);
      }
      50% {
           transform: scale(1);
      }
      100% {
-          transform: scale(.5);
+          transform: scale(0.5);
      }
 }
 
@@ -101,14 +112,24 @@ body {
     animation: shadow-pulse 1s infinite;
 }
 
-a:hover {
-  background-color: yellow;
+.pulse:hover {
+  animation: pulse 2s infinite;
+}
+.pulse:active {
+  animation: shadow-pulse 1s infinite;
+}
+
+.pulse1:hover {
+  animation: pulse 2s infinite;
+}
+.pulse1:active {
+  animation: shadow-pulse 1s infinite;
 }
 
 
 .pulsing-2 {
   /*animation-delay: 2s;*/
-  animation: pulse 3s infinite;
+  animation: pulse 2s infinite;
   margin: 0 auto;
   display: table;
   margin-top: 50px;
@@ -117,13 +138,31 @@ a:hover {
 
 @keyframes pulse {
   0% {
-    opacity: 1;
+    opacity: 0.5;
   }
   100% {
-    opacity: 0.3;
+    opacity: 1;
   }
 }
 
+.img2:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
 
 
 @media only screen and (max-width: 600px) {

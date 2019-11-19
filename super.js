@@ -47,13 +47,13 @@ function addPics2 () {
 }
 
 function addr6Info () {
-	e.classList.add("r6info")
+	e.classList.toggle("r6info")
 }
 
 function addrlInfo () {
-	g.classList.add("rlinfo")
+	g.classList.toggle("rlinfo")
 }
 
 function addfortInfo () {
-	i.classList.add("fortinfo")
+	i.classList.toggle("fortinfo")
 }
